@@ -3,14 +3,14 @@
      //handle here
 //  }
 
-// let btn = document.querySelector("button");
+ let btn = document.querySelector("button");
 
-// btn.onclick = () => {
-//     console.log("button was clicked");
-    // let a = 25;
-    // a++;
-    // console.log(a);
-// }; 
+ btn.onclick = () => {
+     console.log("button was clicked");
+     let a = 25;
+     a++;
+     console.log(a);
+ }; 
 
 
 let btn2 = document.querySelector("#btn2");
@@ -20,30 +20,30 @@ btn2.ondblclick = () => {
 }; 
 
 
-// let div = document.querySelector(".div1");
+ let div = document.querySelector(".div1");
 
-// div.onmouseover = () => {
-//     console.log("u r inside the div");
-// };
+ div.onmouseover = () => {
+     console.log("u r inside the div");
+ };
 
 
 
 // Change the background color of a <div> when the page loads.
 
-// let div2 = document.querySelector(".div2");
+ let div2 = document.querySelector(".div2");
 
-// div2.onload = () => {
-//     console.log("heyy");
-//     // div2.style.backgroundColor = "yellow";
-// };
+ div2.onload = () => {
+     console.log("heyy");
+     div2.style.backgroundColor = "yellow";
+ };
 
-// window.addEventListener("load", function () {
+ window.addEventListener("load", function () {
 //   // Select the div
-//   const div2 = document.getElementById("div");
+   const div2 = document.getElementById("div");
 
 //   // Change the background color
-//   div2.style.backgroundColor = "lightblue";
-// });
+   div2.style.backgroundColor = "lightblue";
+ });
 
 
 
@@ -119,11 +119,11 @@ inpbtn.addEventListener("click" , () => {
 
 // Add or remove a class from an element on button click.
 
-// let btn3 = document.getElementById("btnclass");
+ let btn3 = document.getElementById("btnclass");
 
-// btn3.addEventListener("click" , () => {
-//     btn3.classList.add("newbtnclass");
-// });
+ btn3.addEventListener("click" , () => {
+     btn3.classList.add("newbtnclass");
+ });
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -138,8 +138,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-// Toggle the visibility of an element using display: none.
-
-
-// sanika desai good girl ahe ti chaha krte 
