@@ -1,0 +1,85 @@
+<!-- When you click on something inside a webpage, the click event happens on that exact element first. Then, the event “bubbles up” to the element’s parent, then its parent’s parent, and so on, all the way up to the top of the page.
+Instead of adding listeners to many child elements, you can add one listener on a parent element and catch events from all its children. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .child{
+            background-color: aquamarine;
+            border: 2px solid black;
+            padding: 34px;
+            margin: 34px;
+            cursor: pointer;
+        }
+
+        .childcontainer{
+            background-color: rgb(206, 91, 19);
+            border: 2px solid black;
+            padding: 34px;
+            margin: 34px;
+            cursor: pointer;
+        }
+
+        .container{
+            background-color: rgb(164, 209, 15);
+            border: 2px solid black;
+            padding: 34px;
+            margin: 34px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="childcontainer">
+            <div class="child">
+                i am a child
+            </div>
+        </section>
+    </div>
+    <script>
+        document.querySelector(".child").addEventListener("click", (e)=>{
+            // (e) is an event object
+            e.stopPropagation() 
+            alert("child was clicked")
+        })
+
+        document.querySelector(".childcontainer").addEventListener("click", ()=>{
+            alert("childcontainer was clicked")
+        })
+
+        document.querySelector(".container").addEventListener("click", (e)=>{
+            // (e) is an event object
+            e.stopPropagation()
+            alert("container was clicked")
+        })
+
+        
+        function getRandomColor(){
+            let val1 = Math.ceil(0 + Math.random()* 255);
+            let val2 = Math.ceil(0 + Math.random()* 255);
+            let val3 = Math.ceil(0 + Math.random()* 255);
+            return `rgb(${val1}, ${val2}, ${val3})`
+        }
+
+        // let a = setInterval( () => {
+        //     document.querySelector(".childcontainer").style.background = getRandomColor()
+        // },1000)
+
+        // console.log(a)
+
+
+        let a = setTimeout( () => {
+            document.querySelector(".childcontainer").style.background = getRandomColor()
+        },3000)
+
+        console.log(a)
+
+    </script>
+</body>
+</html>
